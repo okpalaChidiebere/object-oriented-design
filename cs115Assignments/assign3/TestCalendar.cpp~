@@ -1,0 +1,42 @@
+#include "Calendar.h"
+
+int main()
+{
+  int m,y,d;
+  string stringDate,stringDate2;
+  char letter;
+  Date date2;
+do
+  {
+    cout<<"Enter a new date using the format mm-dd-yyyy: ";
+    cin>>m;
+  cin>>d;
+  cin>>y;
+  while(d<1||d>31||m<1||m>12)
+    {
+      cout<<"Incorrect!"<<endl;
+  cout<<"Enter a new date using the format mm-dd-yyyy: ";
+  cin>>m;
+  cin>>d;
+  cin>>y;
+    } 
+ Date date1(m,d,y);
+  stringDate=date1.toString();
+  cout<<"The string version of the date is: ";
+  cout<<stringDate<<", "<<date1.getYear()<<endl;
+  date1.nextDate();
+ stringDate2=date2.toString();
+  cout<<"The next Date in string version is: ";
+  cout<<stringDate2<<", "<<date2.getYear()<<endl;
+  cout<<"Do you want to continue [Y/N]: ";
+  cin>>letter;
+  }while(letter=='Y'||letter=='y');
+
+ cout<<"Good bye!"<<endl;
+
+ return 0;
+}
+
+
+
+  

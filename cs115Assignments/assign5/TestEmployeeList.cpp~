@@ -1,0 +1,35 @@
+#include "IndexList.h"
+#include "IndexList.cpp"
+#include "Employee.h"
+
+using namespace std;
+
+int main()
+{
+  employee myEmployee;
+  const int maxSize=10;
+  indexList<employee, maxSize>myEmployeeList;
+int numItems;
+ int size;
+  cout<<"List of type /""Employee"""<<endl;
+     cout << "Enter number of employees: ";
+	cin >> numItems; 
+	cout<<endl;
+	size = 0;
+if (numItems >= 0  &&  numItems <= maxSize)
+  {
+	   while (size < numItems)
+	   {
+	     myEmployee.setName();
+	     myEmployee.setPhone();
+	     if(!myEmployeeList.append(myEmployee))
+	        break;
+            size++;
+	   }
+  }
+  myEmployeeList.selSort();
+  cout<<"Employee list sorted in ascending order: "<<endl;
+  myEmployeeList.display(cout);
+
+  return 0;
+}

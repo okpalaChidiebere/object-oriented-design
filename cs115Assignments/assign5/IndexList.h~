@@ -1,0 +1,21 @@
+#ifndef IndexList_h
+#define IndexList_h
+#include<iostream>
+
+using namespace std;
+
+template<class T, int maxSize>
+class indexList
+{
+ private:
+  T elements[maxSize];
+  int size;
+
+ public:
+  indexList();
+  void selSort();
+  bool append(const T&);
+  void display(ostream&)const;
+
+};
+#endif

@@ -1,0 +1,41 @@
+#include "Employee.h"
+#include<iostream>
+employee::employee()
+{
+  empName="";
+  phoneNum="";
+}
+
+void employee::setName()
+{
+  cout<<"Enter next name: ";
+  cin>>empName;
+}
+
+void employee::setPhone()
+{
+  cout<<"Enter next phone number: ";
+  cin>>phoneNum;
+}
+
+void  employee::displayName()
+{
+  cout<<"Enter next phone number: ";
+  cout<<empName;
+}
+
+void employee::displayPhone()
+{
+  cout<< phoneNum;
+}
+
+
+bool employee::operator >(const employee&a)const
+{
+  return(empName>a.empName);
+} 
+ostream& operator<<(ostream& ous ,const employee& e)
+{
+  ous<<e.empName;
+    return ous;
+}
